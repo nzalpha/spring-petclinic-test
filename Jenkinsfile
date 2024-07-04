@@ -9,20 +9,9 @@ pipeline {
 
       stages {
         stage ('Build') {
-            when{
-                anyOf{
-                    expression{
-                        params.buildOnly == 'yes'
-                    }
-                }
-            }
-
-
-            // This step will take care of building the application
+                     // This step will take care of building the application
             steps {
-                script{
-                 buildApp().call()
-                }
+                echo "test"
             }
         }
       }
